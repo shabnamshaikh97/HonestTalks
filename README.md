@@ -13,10 +13,10 @@
 
 ## Technologies Used
 
-- **Backend:** Java with Spring Boot framework for RESTful API development and data management.
+- **Backend:** Java with Spring Boot framework hibernate dependencies for data management.
 - **Frontend:** HTML, CSS for responsive and user-friendly web interface.
 - **Database:** Integration with MySQL (or your preferred database) for storing college data and user feedback securely.
-- **Deployment:** Guidance on deploying the application to cloud platforms like AWS, Heroku, or on a self-managed server.
+.
 
 ## Getting Started
 
