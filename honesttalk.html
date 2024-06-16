@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Average Ratings - #HonestTalk</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Average Ratings of Colleges - #HonestTalk</h1>
+    <canvas id="ratingsChart" width="400" height="200"></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ctx = document.getElementById('ratingsChart').getContext('2d');
+            var ratingsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        /* College names will be dynamically loaded */
+                        <span th:each="college : ${colleges}" th:text="'\'' + ${college.name} + '\', '">College Name</span>
+                    ],
+                    datasets: [{
+                        label: 'Average Rating',
+                        data: [
+                            /* College ratings will be dynamically loaded */
+                            <span th:each="college : ${colleges}" th:text="${college.rating} + ', '">0</span>
+                        ],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 5
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
