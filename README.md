@@ -30,7 +30,7 @@
 
 1. Clone the repository:
    bash
-   git clone https://github.com/your-username/honest-talk.git
+   git clone https://github.com/shabnamshaikh97/honest-talk.git
    ```
    
 2. Import the project into your IDE.
