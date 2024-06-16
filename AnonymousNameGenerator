@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class AnonymousNameGenerator {
 
-    // SecureRandom instance to ensure randomness
+    
     private static final SecureRandom secureRandom = new SecureRandom();
 
     // anonymous names
