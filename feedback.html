@@ -1,0 +1,20 @@
+</html>html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedbacks - #HonestTalk</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Feedbacks - #HonestTalk</h1>
+    <div>
+        <h2>Feedback for <span th:text="${college.name}">College Name</span></h2>
+        <ul>
+            <li th:each="feedback : ${feedbacks}">
+                <strong th:text="${feedback.anonymousName}">Anonymous</strong>:
+                <span th:text="${feedback.feedback}">Feedback content</span> 
+                (Rating: <span th:text="${feedback.rating}">0</span>)
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
